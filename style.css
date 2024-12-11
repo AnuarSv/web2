@@ -1,0 +1,39 @@
+
+/*footer stay at bottom https://stackoverflow.com/questions/643879/css-to-make-html-page-footer-stay-at-bottom-of-the-page-with-a-minimum-height-b*/
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+main {
+    flex: 1;
+}
+
+/* header gen */
+header {
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    margin: 20px;
+    font-size: large;
+}
+a {
+    text-decoration: none;
+}
+/* header text */
+.logoname {
+    color: #ff0000;
+}
+.a {
+    color: black;
+}
+
+/* lamp */
+.imglamp {
+    height: 100px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-right: 50px;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Japan</title>
+</head>
+<body>
+    <img class="imglamp" id="imglamp" onclick="changeImage()" src="media/photos/lamp_on.png" alt="lamp_on">
+
+    <header>
+        <a href="#default" class="logoname">Japan</a>
+        <a class="a" href="#home">Home</a>
+        <a class="a" href="#contact">Bootsrtap</a>
+    </header>
+    <main>
+        main
+    </main>
+    <footer>
+        footer
+    </footer>
+    <script>
+        function changeImage() {
+          var image = document.getElementById('imglamp');
+          if (image.src.match("on")) {
+            image.src = "media/photos/lamp_off.png";
+            document.getElementById("imglamp").style.marginRight = "65px";
+          } else {
+            image.src = "media/photos/lamp_on.png";
+            document.getElementById("imglamp").style.marginRight = "50px";
+          }
+        }
+        </script>
+</body>
+</html>
