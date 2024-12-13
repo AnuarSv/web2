@@ -11,22 +11,72 @@ main {
     flex: 1;
 }
 
+/*Скролл сайта, добавлен для разнообразности взят с ютюба(https://youtu.be/qYFkQa0Bbq0)*/
+::-webkit-scrollbar {
+    width: 0;
+  }
+  #scrollPath
+  {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    background: rgba(255,255,255,0.05);
+  }
+  #progressbar
+  {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    background: linear-gradient(to top, #008aff,#00ffe7);
+    animation: animate 5s linear infinite;
+  }
+  @keyframes animate
+  {
+    0%,100%
+    {
+      filter: hue-rotate(0deg);
+    }
+    50%
+    {
+      filter: hue-rotate(360deg);
+    }
+  }
+  #progressbar:before
+  {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #008aff,#00ffe7);
+    filter: blur(10px);
+  }
+  #progressbar:after
+  {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, #008aff,#00ffe7);
+    filter: blur(30px);
+  }
+  /*---------------------------------------------------------*/
+
 /* header gen */
 header {
     background-color: rgb(255, 255, 255);
     text-align: center;
-    margin: 20px;
+    padding: 20px;
     font-size: large;
 }
 a {
     text-decoration: none;
-}
-/* header text */
-.logoname {
-    color: #ff0000;
-}
-.a {
-    color: black;
 }
 
 /* lamp */
@@ -36,4 +86,151 @@ a {
     right: 0;
     top: 0;
     margin-right: 50px;
+}
+/* header text */
+.logoname {
+    color: black;
+    font-size: x-large;
+    margin: 0 20px;
+    font-weight: bold;
+}
+.a {
+    color: black;
+}
+
+.selected {
+    text-decoration: underline;
+}
+
+.placedot {
+    display: flex;
+    justify-content: center;
+    padding: 150px 150px;
+}
+
+.dot {
+
+    height: 500px;
+    width: 500px;
+    background-color: #BC212E;
+    border-radius: 50%;
+ 
+    text-align: center;
+    vertical-align: middle;
+    line-height: 400px; 
+    color: white;
+    font-size: xx-large;
+  }
+
+
+.imgwave {
+    height: 250px;
+    border-radius: 10px;
+}
+
+.textabout {
+    text-align: center; 
+    margin-bottom: 20px;
+}
+
+.about {
+    margin: 30px;
+    border-radius: 20px;
+    background-color: #BC212E;
+    padding: 20px 60px;
+    color: white;
+}
+.about2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
+    gap: 20px;
+}
+
+.textabout {
+    text-align: center; 
+    margin-bottom: 20px;
+}
+
+.history {
+    margin: 30px;
+    border-radius: 20px;
+    background-color: white;
+    padding: 20px 60px;
+    color: black
+}
+.history2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: right;
+    gap: 20px;
+}
+
+.texthistory {
+    text-align: center; 
+    margin-bottom: 20px;
+}
+
+.footer {
+    background-color: #BC212E;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-left, .footer-center, .footer-right {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-left h3 {
+    margin-bottom: 10px;
+}
+
+.footer-center ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-center ul li {
+    margin: 5px 0;
+}
+
+.footer-center ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-right a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-right a:hover {
+    text-decoration: underline;
+}
+
+
+.product-card { 
+    margin-bottom: 20px; 
+}
+.cart-badge { 
+    position: absolute; 
+    top: 10px; 
+    right: 10px; 
+    background-color: #BC212E; 
+    color: white; 
+    border-radius: 50%; 
+    padding: 5px 10px; 
 }
